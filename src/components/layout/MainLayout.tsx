@@ -1,8 +1,9 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, User, Settings, LogOut, Home, Users, DollarSign } from 'lucide-react';
+import { Menu, X, User, Settings, LogOut, Home, Users } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import Footer from './Footer';
 
 interface MainLayoutProps {
   children: React.ReactNode;
@@ -138,11 +139,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
         {children}
       </main>
       
-      <footer className="mt-auto py-6 border-t border-border">
-        <div className="container mx-auto px-4 text-center text-muted-foreground text-sm">
-          <p>© {new Date().getFullYear()} Telegram Private. All rights reserved.</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };
